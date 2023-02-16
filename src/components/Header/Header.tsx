@@ -1,6 +1,7 @@
 import { useState } from "react";
 import MobileNavToggle from "./MobileNavToggle";
 import Navbar from "./Navbar";
+import logo from "../../assets/images/logo.svg";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -11,7 +12,9 @@ const Header = () => {
 
   return (
     <header className="primary-header">
-      <h1 className="logo">W.</h1>
+      <div className="logo">
+        <img src={logo} alt="logo - The letter W followed by a punctuation in a large font size" />
+      </div>
       <MobileNavToggle isMenuOpen={isMenuOpen} handleToggleMenu={handleToggleMenu} />
       <nav>
         <Navbar isMenuOpen={isMenuOpen} />
