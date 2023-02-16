@@ -5,11 +5,11 @@ const news = [
   },
   {
     title: "The Downsides of AI Artistry",
-    text: "What are the possible adverse effects of on-demand AI image generation",
+    text: "What are the possible adverse effects of on-demand AI image generation?",
   },
   {
     title: "is VC Funding Drying Up?",
-    text: "Private funding by VC firms is down 50% YOY. We take a look at what that means",
+    text: "Private funding by VC firms is down 50% YOY. We take a look at what that means.",
   },
 ];
 
@@ -19,8 +19,8 @@ const Sidebar = () => {
       <h2 className="sidebar__title">New</h2>
       {news.map((news) => (
         <article key={news.title} className="sidebar__article">
-          <h4>{news.title}</h4>
-          <p>{news.text}</p>
+          <h4 className="sidebar__article-title">{news.title}</h4>
+          <p className="sidebar__article-text">{news.text}</p>
         </article>
       ))}
     </div>

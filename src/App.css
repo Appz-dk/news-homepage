@@ -13,6 +13,7 @@
   --fs-200: 0.75rem;
   --fs-300: 0.9375rem;
   --fs-400: 1rem;
+  --fs-500: 1.25rem;
   --fs-600: 1.75rem;
   --fs-700: 2.5rem;
 
@@ -176,12 +177,16 @@ body {
   padding-block: 0.75rem;
   text-transform: uppercase;
   font-size: var(--fs-200);
-  font-weight: 500;
-  letter-spacing: 4px;
+  font-weight: 600;
+  letter-spacing: 5px;
   background-color: var(--soft-red);
   border: none;
   outline: none;
   cursor: pointer;
+}
+
+.btn-primary:is(:hover, :focus) {
+  background-color: var(--very-dark-blue);
 }
 
 /* TODO: ADD MEDIA QUERY */
@@ -189,13 +194,36 @@ body {
 /* Sidebar stlying */
 .sidebar__container {
   background-color: var(--very-dark-blue);
-  border: 1px solid red;
-  padding: 1rem;
+  padding: 1.5rem;
 }
 
 .sidebar__title {
   color: var(--soft-orange);
   font-size: var(--fs-600);
+  margin-bottom: 1.5rem;
+}
+
+.sidebar__article-title {
+  color: var(--off-white);
+  font-size: var(--fs-500);
+  line-height: 2;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.sidebar__article-title:hover {
+  color: var(--soft-orange);
+}
+
+.sidebar__article-text {
+  font-size: var(--fs-300);
+  color: var(--grayish-blue);
+}
+
+.sidebar__article:not(:last-child) {
+  padding-bottom: 1.5rem;
+  margin-bottom: 1.5rem;
+  border-bottom: 1px solid var(--grayish-blue);
 }
 
 /* Layout */
