@@ -5,14 +5,10 @@ import Sidebar from "./Sidebar";
 
 const Content = () => {
   return (
-    <main>
-      <section className="content__main-container">
-        <NewsHighlighted />
-        <Sidebar />
-      </section>
-      <section className="content__secondary-container">
-        <NewsFooter />
-      </section>
+    <main className="content__main-container">
+      <NewsHighlighted />
+      <Sidebar />
+      <NewsFooter />
     </main>
   );
 };
